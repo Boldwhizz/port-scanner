@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="port scanner, port checker, online port scanner, simple port scanner, port scanning tool, top, best port scanner, free port scanner, port scanning software, network security, cybersecurity, penetration testing, ethical hacking, network monitoring, open ports, closed ports, TCP scan, UDP scan">
+        <title>Port Scanner</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href={{url_for('static', filename='style.css')}} rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src={{url_for('static', filename='script.js')}} defer></script>
+    </head>
+
+    <header>
+        <div class="hero">
+        <h1>Online Port Scanner</h1>
+        </div>
+    </header>
+
+    <div class="divider"></div>
+    <body>
+        <div class="container">
+            <h1>NETWORK PORT SCANNER</h1>
+            <form id="scanform">
+                <label for="ipAddress">IP Address:</label>
+                <input type="text" id="ipAddress" name="ipAddress" placeholder="Enter IP address" required>
+                <button type="submit">Scan</button>
+            </form>
+
+            <!-- spinner -->
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Scanning in Progess... Please Wait</p>
+            </div>
+
+            <div id="results" class="hidden">
+                <h2>Scan Results: <span id=display></span></h2>
+                <ul id="openportslist"></ul>
+            </div>
+        </div>
+</html>
