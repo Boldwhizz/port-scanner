@@ -50,7 +50,7 @@ def scan_ports():
 
         # check result after each thread completion
         for future in concurrent.futures.as_completed(futures):
-            port = futures.result()
+            port = future.result()
             if port is not None:
                 open_ports.append(port)
 
